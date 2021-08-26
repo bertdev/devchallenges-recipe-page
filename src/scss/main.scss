@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,700;1,400;1,500&display=swap');
+
+$color: (
+  background: #FAFAFA,
+  description: #4F4F4F,
+);
+
+$font: (
+  primary: 'Playfair Display',
+  secondary: 'Montserrat'
+);
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: map-get($color, background);
+  height: 100%;
+  width: 100%;
+}
+
+main {
+  .container {
+    width: calc(100% - 24px);
+    margin: 0 auto;
+  }
+}
+
+.introduction {
+  margin-top: 32px;
+
+  h1 {
+    font: {
+      family: map-get($font, primary);
+      weight: 700;
+      size: 24px;
+    }
+    line-height: 32px;
+  }
+
+  .description {
+    margin-top: 12px;
+    display: flex;
+
+    span {
+      margin-right: 12px;
+    }
+
+    p {
+      font: {
+        family: map-get($font, secondary);
+        weight: 500;
+        style: italic;
+        size: 12px;
+      }
+      line-height: 15px;
+      color: map-get($color, description)
+    }
+  }
+}
+
+.banner {
+  margin-top: 12px;
+  img {
+    width: 100%;
+    border-radius: 12px;
+  }
+}
