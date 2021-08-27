@@ -101,6 +101,9 @@ main .container {
 .ingredients .ingredients-content {
   margin-top: 13px;
 }
+.ingredients .ingredients-content:nth-child(3) {
+  margin-top: 42px;
+}
 .ingredients .ingredients-content h3 {
   font-family: "Playfair Display";
   font-style: italic;
@@ -112,27 +115,48 @@ main .container {
   margin-top: 21px;
 }
 .ingredients .ingredients-content .ingredient-item label {
+  margin-top: 3px;
+  display: block;
   position: relative;
   padding-left: 29px;
-  margin-top: 3px;
+  cursor: pointer;
+  font-family: "Montserrat";
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 17px;
+  color: #333;
 }
 .ingredients .ingredients-content .ingredient-item label input {
   position: absolute;
   opacity: 0;
   cursor: pointer;
-  height: 0;
-  width: 0;
 }
-.ingredients .ingredients-content .ingredient-item label .checkmark {
+.ingredients .ingredients-content .ingredient-item label input:checked ~ .check {
+  background-color: #F2994A;
+}
+.ingredients .ingredients-content .ingredient-item label .check {
   position: absolute;
-  top: 0;
   left: 0;
-  height: 21px;
+  top: 0;
   width: 21px;
-  background-color: #FAFAFA;
-  border-radius: 4px;
+  height: 21px;
   border: 1px solid #828282;
+  border-radius: 4px;
 }
-.ingredients .ingredients-content .ingredient-item label:hover .checkmark {
-  background-color: #333;
+.ingredients .ingredients-content .ingredient-item label .check::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 6px;
+  width: 4px;
+  height: 8px;
+  border: solid #FAFAFA;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+.ingredients .ingredients-content .ingredient-item .sugestion {
+  font-weight: 400;
+}
+.ingredients .ingredients-content .ingredient-item .sugestion em {
+  font-weight: 500;
 }/*# sourceMappingURL=main.css.map */
