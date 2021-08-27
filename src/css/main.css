@@ -159,4 +159,70 @@ main .container {
 }
 .ingredients .ingredients-content .ingredient-item .sugestion em {
   font-weight: 500;
+}
+
+.instructions {
+  margin-top: 27px;
+}
+.instructions h2 {
+  font-family: "Playfair Display";
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  color: #333;
+  margin-bottom: 28px;
+}
+.instructions .step {
+  margin-top: 28px;
+  position: relative;
+  padding-left: 51px;
+}
+.instructions .step .number {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 36px;
+  height: 36px;
+  background-color: #F2994A;
+  border-radius: 6px;
+}
+.instructions .step .number p {
+  font-family: "Playfair Display";
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  color: #fff;
+  text-align: center;
+}
+.instructions .step p {
+  font-family: "Montserrat";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.source {
+  font-family: "Montserrat";
+  font-style: italic;
+  font-size: 12px;
+  line-height: 150%;
+  color: #BDBDBD;
+  margin-top: 26px;
+}
+
+footer {
+  margin-top: 130px;
+  padding-bottom: 24px;
+  text-align: center;
+}
+footer p {
+  font-family: "Montserrat";
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 17px;
+  color: #828282;
+}
+footer p a {
+  font-weight: 700;
+  color: #828282;
 }/*# sourceMappingURL=main.css.map */

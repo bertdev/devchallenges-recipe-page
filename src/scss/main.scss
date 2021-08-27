@@ -6,6 +6,7 @@ $color: (
   Gray1: #333,
   Gray2: #4F4F4F,
   Gray4:#BDBDBD,
+  Orange: #F2994A,
 );
 
 $font: (
@@ -222,4 +223,89 @@ main {
       }
     }
   }
+}
+
+.instructions {
+  margin-top: 27px;
+
+  h2 {
+    font: {
+      family: map-get($font, primary);
+      weight: 700;
+      size: 24px;
+    }
+    line-height: 32px;
+    color: map-get($color, Gray1);
+    margin-bottom: 28px;
+  }
+
+  .step {
+    margin-top: 28px;
+    position: relative;
+    padding-left: 51px;
+
+
+    .number {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 36px;
+      height: 36px;
+      background-color: map-get($color, Orange);
+      border-radius: 6px;
+
+      p {
+        font: {
+          family: map-get($font, primary);
+          weight: 700;
+          size: 24px;
+        }
+        line-height: 32px;
+        color: #fff;
+        text-align: center;
+      }
+    }
+
+    p {
+      font: {
+        family: map-get($font, secondary);
+        weight: 400;
+        size: 16px;
+      }
+      line-height: 20px;
+    }
+  }
+}
+
+.source {
+  font: {
+    family: map-get($font, secondary);
+    style: italic;
+    size: 12px;
+  }
+  line-height: 150%;
+  color: map-get($color, Gray4);
+  margin-top: 26px;
+}
+
+footer {
+  margin-top: 130px;
+  padding-bottom: 24px;
+  text-align: center;
+
+  p {
+    font: {
+      family: map-get($font, secondary);
+      size: 14px;
+      weight: 500;
+    }
+    line-height: 17px;
+    color: #828282;
+
+    a {
+      font-weight: 700;
+      color: #828282;
+    }
+  }
+
 }
