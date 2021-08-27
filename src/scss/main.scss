@@ -3,7 +3,9 @@
 
 $color: (
   background: #FAFAFA,
-  description: #4F4F4F,
+  Gray1: #333,
+  Gray2: #4F4F4F,
+  Gray4:#BDBDBD,
 );
 
 $font: (
@@ -59,7 +61,7 @@ main {
         size: 12px;
       }
       line-height: 15px;
-      color: map-get($color, description)
+      color: map-get($color, Gray2)
     }
   }
 }
@@ -69,5 +71,124 @@ main {
   img {
     width: 100%;
     border-radius: 12px;
+  }
+}
+
+.recipe {
+  margin-top: 24px;
+}
+
+.recipe-informations {
+
+  .information {
+    display: flex;
+    align-items: center;
+    height: 26px;
+    font-family: map-get($font, secondary);
+
+    svg {
+      width: 14px;
+      height: 14px;
+      margin-right: 5.45px;
+    }
+
+    .information-content {
+      strong {
+        display: block;
+        color: map-get($color, Gray4);
+        font: {
+          size: 8px;
+          weight: 700;
+        };
+        line-height: 8px;
+        text-transform: uppercase;
+      }
+
+      small {
+        font: {
+          weight: 500;
+          size: 10px;
+        }
+        line-height: 10px;
+        color: map-get($color, Gray1);
+      }
+    }
+  }
+
+  .prep-informations {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+
+  .yeld {
+    .information-content {
+      small {
+        color: #F2994A;
+      }
+    }
+  }
+}
+
+.ingredients {
+  margin-top: 30px;
+
+  h2 {
+    font: {
+      family: map-get($font, primary);
+      size: 18px;
+      weight: 700;
+    }
+    line-height: 24px;
+    color: map-get($color, Gray1)
+  }
+
+  .ingredients-content {
+    margin-top: 13px;
+
+    h3 {
+      font: {
+        family: map-get($font, primary);
+        style: italic;
+        size: 16px;
+      }
+      line-height: 21px;
+      color: map-get($color, Gray1);
+    }
+
+    .ingredient-item {
+      margin-top: 21px;
+
+      label {
+        position: relative;
+        padding-left: 29px;
+        margin-top: 3px;
+
+        input {
+          position: absolute;
+          opacity: 0;
+          cursor: pointer;
+          height: 0;
+          width: 0;
+        }
+   
+        .checkmark {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 21px;
+          width: 21px;
+          background-color: #FAFAFA;
+          border-radius: 4px;
+          border: 1px solid #828282;
+        }
+
+        &:hover {
+          .checkmark {
+            background-color: #333;
+          }
+        }
+      }
+    }
   }
 }
