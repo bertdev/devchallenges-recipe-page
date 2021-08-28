@@ -16,9 +16,19 @@ main .container {
   width: calc(100% - 24px);
   margin: 0 auto;
 }
+@media (min-width: 870px) {
+  main .container {
+    max-width: 970px;
+  }
+}
 
 .introduction {
   margin-top: 32px;
+}
+@media (min-width: 870px) {
+  .introduction {
+    margin-top: 52px;
+  }
 }
 .introduction h1 {
   font-family: "Playfair Display";
@@ -26,9 +36,16 @@ main .container {
   font-size: 24px;
   line-height: 32px;
 }
+@media (min-width: 870px) {
+  .introduction h1 {
+    font-size: 48px;
+    line-height: 64px;
+  }
+}
 .introduction .description {
   margin-top: 12px;
   display: flex;
+  max-width: 592px;
 }
 .introduction .description span {
   margin-right: 12px;
@@ -41,9 +58,20 @@ main .container {
   line-height: 15px;
   color: #4F4F4F;
 }
+@media (min-width: 870px) {
+  .introduction .description p {
+    font-size: 14px;
+    line-height: 17px;
+  }
+}
 
 .banner {
   margin-top: 12px;
+}
+@media (min-width: 870px) {
+  .banner {
+    margin-top: 43px;
+  }
 }
 .banner img {
   width: 100%;
@@ -53,7 +81,28 @@ main .container {
 .recipe {
   margin-top: 24px;
 }
+@media (min-width: 870px) {
+  .recipe {
+    margin-top: 48px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+}
 
+@media (min-width: 870px) {
+  .recipe-informations {
+    width: 216px;
+    height: 367px;
+    background-color: #fff;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+}
 .recipe-informations .information {
   display: flex;
   align-items: center;
@@ -65,6 +114,13 @@ main .container {
   height: 14px;
   margin-right: 5.45px;
 }
+@media (min-width: 870px) {
+  .recipe-informations .information svg {
+    width: 28px;
+    height: 28px;
+    margin-right: 14px;
+  }
+}
 .recipe-informations .information .information-content strong {
   display: block;
   color: #BDBDBD;
@@ -73,23 +129,60 @@ main .container {
   line-height: 8px;
   text-transform: uppercase;
 }
+@media (min-width: 870px) {
+  .recipe-informations .information .information-content strong {
+    font-size: 10px;
+    line-height: 12px;
+  }
+}
 .recipe-informations .information .information-content small {
   font-weight: 500;
   font-size: 10px;
   line-height: 10px;
   color: #333;
 }
+@media (min-width: 870px) {
+  .recipe-informations .information .information-content small {
+    font-size: 14px;
+    line-height: 17px;
+  }
+}
 .recipe-informations .prep-informations {
   display: flex;
   justify-content: space-between;
   margin-top: 20px;
 }
+@media (min-width: 870px) {
+  .recipe-informations .prep-informations {
+    flex: 1;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-top: 0;
+  }
+}
 .recipe-informations .yeld .information-content small {
   color: #F2994A;
+}
+@media (min-width: 870px) {
+  .recipe-informations .yeld {
+    margin-top: 57px;
+    max-height: 34px;
+  }
+}
+
+@media (min-width: 870px) {
+  .content-main-recipe {
+    max-width: 584px;
+  }
 }
 
 .ingredients {
   margin-top: 30px;
+}
+@media (min-width: 870px) {
+  .ingredients {
+    margin-top: 0px;
+  }
 }
 .ingredients h2 {
   font-family: "Playfair Display";
@@ -98,8 +191,19 @@ main .container {
   line-height: 24px;
   color: #333;
 }
+@media (min-width: 870px) {
+  .ingredients h2 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
 .ingredients .ingredients-content {
   margin-top: 13px;
+}
+@media (min-width: 870px) {
+  .ingredients .ingredients-content {
+    margin-top: 31px;
+  }
 }
 .ingredients .ingredients-content:nth-child(3) {
   margin-top: 42px;
@@ -111,8 +215,19 @@ main .container {
   line-height: 21px;
   color: #333;
 }
+@media (min-width: 870px) {
+  .ingredients .ingredients-content h3 {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
 .ingredients .ingredients-content .ingredient-item {
   margin-top: 21px;
+}
+@media (min-width: 870px) {
+  .ingredients .ingredients-content .ingredient-item {
+    margin-top: 28px;
+  }
 }
 .ingredients .ingredients-content .ingredient-item label {
   margin-top: 3px;
@@ -125,6 +240,12 @@ main .container {
   font-weight: 500;
   line-height: 17px;
   color: #333;
+}
+@media (min-width: 870px) {
+  .ingredients .ingredients-content .ingredient-item label {
+    font-size: 16px;
+    line-height: 25px;
+  }
 }
 .ingredients .ingredients-content .ingredient-item label input {
   position: absolute;
@@ -208,6 +329,12 @@ main .container {
   line-height: 150%;
   color: #BDBDBD;
   margin-top: 26px;
+}
+@media (min-width: 870px) {
+  .source {
+    font-size: 16px;
+    margin-top: 57px;
+  }
 }
 
 footer {

@@ -14,6 +14,16 @@ $font: (
   secondary: 'Montserrat'
 );
 
+// media querys 970 max
+$desktop: 870px;
+
+@mixin desktop {
+  @media (min-width: #{$desktop}) {
+    @content;
+  }
+}
+
+
 
 * {
   margin: 0;
@@ -31,11 +41,19 @@ main {
   .container {
     width: calc(100% - 24px);
     margin: 0 auto;
+
+    @include desktop {
+      max-width: 970px;
+    }
   }
 }
 
 .introduction {
   margin-top: 32px;
+
+  @include desktop {
+    margin-top: 52px;
+  }
 
   h1 {
     font: {
@@ -44,11 +62,17 @@ main {
       size: 24px;
     }
     line-height: 32px;
+
+    @include desktop {
+      font-size: 48px;
+      line-height: 64px;
+    }
   }
 
   .description {
     margin-top: 12px;
     display: flex;
+    max-width: 592px;
 
     span {
       margin-right: 12px;
@@ -62,13 +86,23 @@ main {
         size: 12px;
       }
       line-height: 15px;
-      color: map-get($color, Gray2)
+      color: map-get($color, Gray2);
+      
+      @include desktop {
+        font-size: 14px;
+        line-height: 17px;
+      }
     }
   }
 }
 
 .banner {
   margin-top: 12px;
+  
+  @include desktop {
+    margin-top: 43px;
+  }
+
   img {
     width: 100%;
     border-radius: 12px;
@@ -77,9 +111,31 @@ main {
 
 .recipe {
   margin-top: 24px;
+
+  @include desktop {
+    margin-top: 48px;
+
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
 }
 
 .recipe-informations {
+
+  @include desktop {
+    width: 216px;
+    height: 367px;
+    background-color: #fff;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+  
+
 
   .information {
     display: flex;
@@ -87,10 +143,17 @@ main {
     height: 26px;
     font-family: map-get($font, secondary);
 
+
     svg {
       width: 14px;
       height: 14px;
       margin-right: 5.45px;
+
+      @include desktop {
+        width: 28px;
+        height: 28px;
+        margin-right: 14px;
+      }
     }
 
     .information-content {
@@ -103,6 +166,11 @@ main {
         };
         line-height: 8px;
         text-transform: uppercase;
+
+        @include desktop {
+          font-size: 10px;
+          line-height: 12px;
+        }
       }
 
       small {
@@ -112,6 +180,11 @@ main {
         }
         line-height: 10px;
         color: map-get($color, Gray1);
+
+        @include desktop {
+          font-size: 14px;
+          line-height: 17px;
+        }
       }
     }
   }
@@ -120,6 +193,13 @@ main {
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
+
+    @include desktop {
+      flex: 1;
+      flex-direction: column;
+      justify-content: space-evenly;
+      margin-top: 0;
+    }
   }
 
   .yeld {
@@ -128,11 +208,26 @@ main {
         color: #F2994A;
       }
     }
+
+    @include desktop {
+      margin-top: 57px;
+      max-height: 34px;
+    }
+  }
+}
+
+.content-main-recipe {
+  @include desktop {
+    max-width: 584px;
   }
 }
 
 .ingredients {
   margin-top: 30px;
+
+  @include desktop {
+    margin-top: 0px;
+  }
 
   h2 {
     font: {
@@ -141,11 +236,20 @@ main {
       weight: 700;
     }
     line-height: 24px;
-    color: map-get($color, Gray1)
+    color: map-get($color, Gray1);
+
+    @include desktop {
+      font-size: 24px;
+      line-height: 32px;
+    }
   }
 
   .ingredients-content {
     margin-top: 13px;
+
+    @include desktop {
+      margin-top: 31px;
+    }
 
     &:nth-child(3) {
       margin-top: 42px;
@@ -159,11 +263,19 @@ main {
       }
       line-height: 21px;
       color: map-get($color, Gray1);
+
+      @include desktop {
+        font-size: 18px;
+        line-height: 24px;
+      }
     }
 
     .ingredient-item {
       margin-top: 21px;
 
+      @include desktop {
+        margin-top: 28px;
+      }
 
       label {
         margin-top: 3px;
@@ -179,6 +291,11 @@ main {
         }
         line-height: 17px;
         color: map-get($color, Gray1);
+
+        @include desktop {
+          font-size: 16px;
+          line-height: 25px;
+        }
 
         input {
           position: absolute;
@@ -286,6 +403,11 @@ main {
   line-height: 150%;
   color: map-get($color, Gray4);
   margin-top: 26px;
+
+  @include desktop {
+    font-size: 16px;
+    margin-top: 57px;
+  }
 }
 
 footer {
